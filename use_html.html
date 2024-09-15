@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Development - Using HTML</title>
+    <link rel="stylesheet" href="./header_footer_style.css" />
+    <link rel="stylesheet" href="./aside_style.css" />
+    <style>
+      .inline,
+      .block {
+        margin: 2em 1em;
+      }
+      pre {
+        font-size: 110%;
+        padding-top: 1em;
+        background-color: rgb(209, 209, 209);
+        width: fit-content;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>WEB DEVELOPMENT</h1>
+      <p>
+        "Web development is not only about making and designing a website. Its
+        more about engaging the viewers."
+      </p>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li class="current-link">
+            <a href="./html_tag.html">HTML</a>
+            <ul>
+              <li><a href="./html_tag.html">Common HTML Tags</a></li>
+              <li class="current-link">
+                <a href="./use_html.html">How to use HTML?</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="./css_prop.html">CSS</a>
+            <ul>
+              <li><a href="./css_prop.html">Common CSS Properties</a></li>
+              <li><a href="./use_css.html">Applying CSS</a></li>
+            </ul>
+          </li>
+          <li><a href="./js.html">JS</a></li>
+          <li><a href="./other_res.html">Other Resources</a></li>
+          <li><a href="./jobs_html.html">Job and Future Oppotunities</a></li>
+        </ul>
+      </nav>
+    </header>
+    <aside>
+      <p>Contents:</p>
+      <ul>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#dom">Standard Document Tree</a></li>
+        <li><a href="#inline_block">HTML Tags - Inline and Block</a></li>
+        <li><a href="#nesting">Nesting Tags</a></li>
+        <li><a href="#attr">Attributes</a></li>
+      </ul>
+    </aside>
+    <div class="content">
+      <h2 id="intro">Introduction</h2>
+      <p>
+        The HyperText Markup Language or HTML is the standard markup language
+        for documents designed to be displayed in a web browser. Web browsers
+        receive HTML documents from a web server or from local storage and
+        render the documents into multimedia web pages. HTML describes the
+        structure of a web page semantically and originally included cues for
+        the appearance of the document.<br />HTML elements are the building
+        blocks of HTML pages. With HTML constructs, images and other objects
+        such as interactive forms may be embedded into the rendered page. HTML
+        provides a means to create structured documents by denoting structural
+        semantics for text such as headings, paragraphs, lists, links, quotes
+        and other items. HTML elements are delineated by tags, written using
+        angle brackets. Browsers do not display the HTML tags but use them to
+        interpret the content of the page<br />.HTML can embed programs written
+        in a scripting language such as JavaScript, which affects the behavior
+        and content of web pages. Inclusion of CSS defines the look and layout
+        of content. The World Wide Web Consortium (W3C), former maintainer of
+        the HTML and current maintainer of the CSS standards, has encouraged the
+        use of CSS over explicit presentational HTML since 1997.
+      </p>
+      <br />
+      <h2 id="dom">Standard Document Tree</h2>
+      <div>
+        <p>
+          A HTML document consists of two parts: DOCTYPE declaration and
+          document tree. DOCTYPE declaration tells the browser which version of
+          HTML are you using. Document tree consists of HTML elements that
+          define content and structure of web page. &lt; html &gt; is the root
+          element which marks the end and the begining of the HTML document
+          tree.<br /><br />Here's a standard HTML document tree which is used in
+          almost every HTML document.
+        </p>
+        <pre>
+                    &lt; !DOCTYPE html &gt;
+                    &lt; html lang="en" &gt;
+                            &lt; head &gt;
+                                    &lt; meta charset="utf-8" &gt;
+                                    &lt; title &gt; ---------- &lt; /title &gt;
+                            &lt; /head &gt;
+                            &lt; body &gt;
+                                    -----Rest of the content and tags-----
+                            &lt; /body &gt;
+                    &lt; /html &gt;
+                </pre
+        >
+      </div>
+      <br />
+      <h2 id="inline_block">HTML Tags - Inline and Block</h2>
+      <p>
+        HTML tags or elements are basically divided into two types depending on
+        how they are visualised and depicted inherently without the use of CSS.
+        These are inline elements and block elements.
+      </p>
+      <div class="inline">
+        <h4>Inline Elements</h4>
+        <p>
+          An inline element does not start on a new line. An inline element only
+          takes up as much width as necessary.<br />Commonly used inline
+          elements: &lt;span&gt;, &lt;a&gt;, &lt;img&gt;, &lt;input&gt;
+        </p>
+      </div>
+      <div class="block">
+        <h4>Block Elements</h4>
+        <p>
+          A block-level element always starts on a new line, and the browsers
+          automatically add some space (a margin) before and after the element.
+          A block-level element always takes up the full width available.<br />Commonly
+          used block elements: &lt;p&gt;, &lt;div&gt;, &lt;header&gt;,
+          &lt;table&gt;
+        </p>
+      </div>
+      <br />
+      <br />
+      <h2 id="nesting">Nesting Tags</h2>
+      <p>
+        Nesting tags is quite an important and fundamental skill when it comes
+        to HTML. It is like a box in a bigger box. When you nest tags then you
+        need to close the tag first which was opened first otherwise
+        complications will occur.<br />Moreover, you can use inline level
+        elements inside a block level element but you cannot insert a block
+        level element inside a block element except for the &lt; div &gt;.
+        Inline level elements can be inserted anywhere.<br />Nested tables and
+        nested lists are quite common in web pages and you need to properly nest
+        the tags to make the CSS work properly as well for screen readers.
+      </p>
+      <br />
+      <h2 id="attr">Attributes</h2>
+      <p>
+        Attributes are used along with the tags to specify some of its
+        additional properties and changes how it is displayed. With each
+        attribute, you usually give it a value defining what is to be done for
+        example for an image you give the image url in the src attribute of &lt;
+        img &gt; tag.<br />There are also attributes which do not require any
+        value. Such attributes are called <strong>boolean attributes</strong>.
+        These attributes work when they are written otherwise their value is
+        false. For example, in &lt; input &gt; tag, <i>required</i> is a boolean
+        attribute which when written specifies that the input is compulsory for
+        that field before submitting.
+      </p>
+    </div>
+    <footer>
+      <p>
+        This website has been made by Pankaj Tyagi and Tanishq Negi. For any
+        queries email us at <i>pankaj6255dav@gmail.com</i>
+      </p>
+    </footer>
+  </body>
+</html>
